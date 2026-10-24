@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Navbar menu underline animation */
+
+.nav-menu {
+    position: relative;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Underline */
+.nav-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #f97316; /* Orange */
+    
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Mouse hover */
+.nav-menu:hover::after {
+    transform: scaleX(1);
+}
+
+/* Text color */
+.nav-menu:hover {
+    color: #f97316;
+}
+
+
